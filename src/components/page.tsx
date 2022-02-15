@@ -25,19 +25,19 @@ function Page() {
 
             <main className="relative z-50 w-full h-auto px-5 md:w-desktopTodo md:mx-auto md:px-0">
 
-                <div className="w-full h-auto rounded-md overflow-hidden transition-colors shadow-xl mb-5 bg-light-foreground dark:bg-dark-foreground">
+                <div className="w-full h-auto rounded-md overflow-hidden transition-colors shadow-xl mb-6 bg-light-foreground dark:bg-dark-foreground">
                     <TodoInput />
                 </div>
 
-                <div className="w-full h-auto rounded-md overflow-hidden transition-colors shadow-xl mb-5 bg-light-todoList dark:bg-dark-todoList">
+                <div className="w-full h-auto rounded-md overflow-hidden transition-colors shadow-xl mb-6 bg-light-todoList dark:bg-dark-todoList">
                     <TodoList />
                 </div>
 
-                <div className="w-full h-auto rounded-md overflow-hidden transition-colors shadow-xl mb-5 bg-light-foreground dark:bg-dark-foreground py-5 lg:hidden">
+                <div className="flex items-center w-full h-16 rounded-md overflow-hidden transition-colors shadow-xl mb-6 bg-light-foreground dark:bg-dark-foreground lg:hidden">
                     <TodoFilter />
                 </div>
 
-                <p className="w-full h-auto mt-12 text-center text-sm font-bold text-light-secondaryText dark:text-dark-secondaryText">Drag and drop to reorder list</p>
+                <p className="w-full h-auto mt-10 text-center text-sm font-bold text-light-secondaryText dark:text-dark-secondaryText">Drag and drop to reorder list</p>
 
             </main>
 
