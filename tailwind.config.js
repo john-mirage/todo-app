@@ -1,3 +1,5 @@
+const defaultTheme = require('tailwindcss/defaultTheme')
+
 module.exports = {
     content: [
         "./index.html",
@@ -25,26 +27,13 @@ module.exports = {
                 todoList: 'hsl(237, 14%, 26%)',
             },
         },
-        fontFamily: {
-            sans: [
-                'Josefin Sans',
-                'ui-sans-serif',
-                'system-ui',
-                '-apple-system',
-                'BlinkMacSystemFont',
-                '"Segoe UI"',
-                'Roboto',
-                '"Helvetica Neue"',
-                'Arial',
-                '"Noto Sans"',
-                'sans-serif',
-                '"Apple Color Emoji"',
-                '"Segoe UI Emoji"',
-                '"Segoe UI Symbol"',
-                '"Noto Color Emoji"',
-            ],
-        },
         extend: {
+            fontFamily: {
+                sans: [
+                    'Josefin Sans',
+                    ...defaultTheme.fontFamily.sans,
+                ]
+            },
             backgroundImage: {
                 'mobile-dark-bg': "url('/src/assets/images/bg-mobile-dark.jpg')",
                 'mobile-light-bg': "url('/src/assets/images/bg-mobile-light.jpg')",
