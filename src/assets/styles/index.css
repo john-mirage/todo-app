@@ -1,3 +1,27 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.cd-check-input:checked ~ .cd-check-label .cd-check-button .cd-check-circle .cd-check-icon {
+    @apply block;
+}
+
+.cd-check-input:checked ~ .cd-todo-content {
+    @apply text-light-textSecondary dark:text-dark-textSecondary line-through;
+}
+
+.cd-check-input:checked ~ .cd-check-label .cd-check-button .cd-check-circle {
+    @apply bg-gradient-to-br from-blue to-pink;
+}
+
+.cd-check-input:checked ~ .cd-check-label .cd-check-button .cd-check-circle .cd-check-overlay {
+    @apply hidden;
+}
+
+.cd-check-label:hover .cd-check-button .cd-check-circle {
+    @apply bg-gradient-to-br from-blue to-pink;
+}
+
+.cd-todo:hover .cd-cross-button .cd-cross-icon {
+    @apply opacity-100;
+}

@@ -23,7 +23,7 @@ function Page() {
 
             <div className="absolute z-40 top-0 left-0 w-full h-52 bg-mobile-light-bg dark:bg-mobile-dark-bg bg-no-repeat bg-cover lg:h-96 lg:bg-desktop-light-bg lg:dark:bg-desktop-dark-bg"></div>
 
-            <main className="relative z-50 w-full h-auto px-5 md:w-desktopTodo md:mx-auto md:px-0">
+            <main className="relative z-50 w-full h-auto px-5 md:w-[45rem] md:mx-auto md:px-0">
 
                 <div className="w-full h-auto rounded-md overflow-hidden transition-colors shadow-xl mb-6 bg-light-foreground dark:bg-dark-foreground">
                     <TodoInput />
