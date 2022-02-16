@@ -40,9 +40,6 @@ module.exports = {
                 'desktop-dark-bg': "url('/src/assets/images/bg-desktop-dark.jpg')",
                 'desktop-light-bg': "url('/src/assets/images/bg-desktop-light.jpg')"
             },
-            spacing: {
-                'desktopTodo': '45rem',
-            }
         },
     },
     plugins: [],
