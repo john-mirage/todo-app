@@ -1,7 +1,7 @@
-function IconButton({ action ,children }) {
+function IconButton({ className, action ,children }) {
     return (
         <button
-            className="relative flex w-12 h-12 rounded-full cursor-pointer -mr-3"
+            className={`relative flex w-12 h-12 rounded-full cursor-pointer ${className}`}
             onClick={action}
         >
             <div className="m-auto">
