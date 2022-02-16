@@ -2,7 +2,7 @@ function TodoInput() {
     return (
         <div className="flex flex-row items-center w-full h-16 px-5">
             <input
-                className="flex-1 order-2 py-2 px-5 outline-none transition-colors text-light-primaryText dark:text-dark-primaryText bg-light-foreground dark:bg-dark-foreground placeholder:text-light-secondaryText dark:placeholder:text-dark-secondaryText"
+                className="flex-1 order-2 py-2 px-5 outline-none transition-colors text-light-textPrimary dark:text-dark-textPrimary bg-light-foreground dark:bg-dark-foreground placeholder:text-light-textSecondary dark:placeholder:text-dark-textSecondary"
                 type="text"
                 placeholder="Create a new todo..."
             />

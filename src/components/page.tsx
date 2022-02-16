@@ -17,11 +17,11 @@ function Page() {
     }, [isDarkMode])
 
     return (
-        <div className="relative w-full min-h-screen pt-24 pb-20 transition-colors bg-light-background dark:bg-dark-background">
+        <div className="relative w-full min-h-screen pt-24 pb-20 transition-colors bg-light-background dark:bg-dark-background lg:pt-48">
             
             <TopAppBar isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
 
-            <div className="absolute z-40 top-0 left-0 w-full h-52 bg-mobile-light-bg dark:bg-mobile-dark-bg bg-no-repeat bg-cover"></div>
+            <div className="absolute z-40 top-0 left-0 w-full h-52 bg-mobile-light-bg dark:bg-mobile-dark-bg bg-no-repeat bg-cover lg:h-96 lg:bg-desktop-light-bg lg:dark:bg-desktop-dark-bg"></div>
 
             <main className="relative z-50 w-full h-auto px-5 md:w-desktopTodo md:mx-auto md:px-0">
 
@@ -37,7 +37,7 @@ function Page() {
                     <TodoFilter />
                 </div>
 
-                <p className="w-full h-auto mt-10 text-center text-sm font-bold text-light-secondaryText dark:text-dark-secondaryText">Drag and drop to reorder list</p>
+                <p className="w-full h-auto mt-10 text-center text-sm font-bold text-light-textSecondary dark:text-dark-textSecondary">Drag and drop to reorder list</p>
 
             </main>
 
