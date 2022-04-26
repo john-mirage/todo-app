@@ -2,10 +2,12 @@ import {connect} from 'react-redux'
 import {ActionCreator, bindActionCreators} from 'redux'
 import * as TodoActions from '@actions/index';
 import TodoList from "@components/todo-list";
-import {getVisibleTodos} from "@selectors/selectors";
+import {getCompletedTodoCount, getVisibleTodos} from "@selectors/selectors";
 
 const mapStateToProps = state => ({
-  filteredTodos: getVisibleTodos(state)
+  filteredTodos: getVisibleTodos(state),
+  todosCount: state.todos.length,
+  completedCount: getCompletedTodoCount(state)
 })
 
 const mapDispatchToProps = dispatch => ({
