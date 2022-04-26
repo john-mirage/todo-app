@@ -12,7 +12,7 @@ ReactDOM.render(
     <React.StrictMode>
         <Provider store={store}>
             <Page />
-        </Provider>,
+        </Provider>
     </React.StrictMode>,
     document.getElementById('root')
 )
