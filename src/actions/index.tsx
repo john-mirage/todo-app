@@ -1,4 +1,4 @@
-import * as types from '../constants/action-types'
+import * as types from '@constants/action-types'
 
 export const addTodo = text => ({ type: types.ADD_TODO, text })
 export const deleteTodo = id => ({ type: types.DELETE_TODO, id })

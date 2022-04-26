@@ -1,6 +1,6 @@
 import TopAppBar from "@components/top-app-bar"
-import TodoInput from "@containers/todo-input";
-import TodoList from "@components/todo-list"
+import TodoInput from "@containers/todo-input"
+import TodoList from "@containers/todo-list"
 import TodoFilter from "@components/todo-filter"
 import {useEffect, useState} from "react"
 

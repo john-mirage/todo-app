@@ -1,8 +1,8 @@
-function IconButton({ className, action ,children }) {
+function IconButton({ className, children, onClick }) {
     return (
         <button
             className={`relative flex w-12 h-12 rounded-full cursor-pointer ${className}`}
-            onClick={action}
+            onClick={onClick}
         >
             <div className="m-auto">
                 {children}
