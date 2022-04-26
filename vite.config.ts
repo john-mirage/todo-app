@@ -10,7 +10,10 @@ export default defineConfig({
             '@assets': resolve(__dirname, 'src/assets'),
             '@components': resolve(__dirname, 'src/components'),
             '@constants': resolve(__dirname, 'src/constants'),
+            '@containers': resolve(__dirname, 'src/containers'),
             '@reducers': resolve(__dirname, 'src/reducers'),
+            '@actions': resolve(__dirname, 'src/actions'),
+            '@selectors': resolve(__dirname, 'src/selectors'),
         },
     },
 })

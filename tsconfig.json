@@ -20,7 +20,10 @@
       "@assets/*": ["src/assets/*"],
       "@components/*": ["src/components/*"],
       "@constants/*": ["src/constants/*"],
+      "@containers/*": ["src/containers/*"],
       "@reducers/*": ["src/reducers/*"],
+      "@actions/*": ["src/actions/*"],
+      "@selectors/*": ["src/selectors/*"],
     }
   },
   "include": ["src"],
