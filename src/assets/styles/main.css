@@ -1,3 +1,26 @@
+:root {
+    --color-blue: hsl(220, 98%, 61%);
+    --color-cyan: hsl(192, 100%, 67%);
+    --color-pink: hsl(280, 87%, 65%);
+    --color-white: hsl(0, 0%, 100%);
+
+    --color-light-foreground: hsl(0, 0%, 100%);
+    --color-light-background: hsl(0, 0%, 98%);
+    --color-light-text: hsl(235, 19%, 35%);
+    --color-light-text-alt: hsl(236, 9%, 61%);
+    --color-light-list: hsl(233, 11%, 84%);
+
+    --color-dark-foreground: hsl(235, 24%, 19%);
+    --color-dark-background: hsl(235, 21%, 11%);
+    --color-dark-text: hsl(234, 39%, 85%);
+    --color-dark-text-alt: hsl(234, 11%, 52%);
+    --color-dark-list: hsl(237, 14%, 26%);
+}
+
+html {
+    font-size: 10px;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

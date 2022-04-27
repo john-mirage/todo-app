@@ -1,4 +1,4 @@
-import '@assets/styles/index.css';
+import '@assets/styles/main.css';
 import Page from '@components/page';
 import reducer from "@reducers/root-reducer";
 import React from 'react';
