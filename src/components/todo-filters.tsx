@@ -9,13 +9,13 @@ const FILTER_TITLES = {
 
 function TodoFilters() {
   return (
-    <ul className="flex flex-row justify-center items-center w-full h-auto">
+    <div className="flex flex-row justify-center items-center w-full h-auto">
       {Object.keys(FILTER_TITLES).map(filter =>
         <TodoFilter key={filter} filter={filter}>
           {FILTER_TITLES[filter]}
         </TodoFilter>
       )}
-    </ul>
+    </div>
   );
 }
 

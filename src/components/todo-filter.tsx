@@ -1,3 +1,5 @@
+
+
 function TodoFilter({active, children, setFilter}) {
   return (
     <button
@@ -9,4 +11,4 @@ function TodoFilter({active, children, setFilter}) {
   )
 }
 
-export default TodoFilter
+export default TodoFilter;
