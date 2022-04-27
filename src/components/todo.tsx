@@ -29,7 +29,7 @@ function Todo({id, todo, completeTodo, deleteTodo}: Props) {
         className="cd-todo-content text-sm font-normal text-light-textPrimary dark:text-dark-textPrimary ml-5">{todo.text}</p>
       <IconButton className="cd-cross-button ml-auto -mr-4" onClick={handleTodoDeletion}>
         <CrossIcon
-          className="cd-cross-icon w-4 h-4 stroke-light-textSecondary dark:stroke-dark-textSecondary lg:opacity-0 lg:transition-opacity"/>
+          className="cd-cross-icon w-4 h-4 stroke-light-textSecondary dark:stroke-dark-textSecondary hover:stroke-light-textPrimary hover:dark:stroke-dark-textPrimary lg:opacity-0 lg:transition-opacity"/>
       </IconButton>
     </div>
   )
