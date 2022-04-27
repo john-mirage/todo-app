@@ -1,50 +1,42 @@
 import TopAppBar from "@components/top-app-bar"
 import TodoInput from "@containers/todo-input"
 import TodoList from "@containers/todo-list"
-import TodoFilter from "@containers/todo-filter"
 import {useEffect, useState} from "react"
-import {SHOW_ACTIVE, SHOW_ALL, SHOW_COMPLETED} from "@constants/todo-filters";
-
-const FILTER_TITLES = {
-  [SHOW_ALL]: 'All',
-  [SHOW_ACTIVE]: 'Active',
-  [SHOW_COMPLETED]: 'Completed'
-}
+import Background from "@components/background";
+import classes from "@assets/styles/components/page.module.css";
+import Container from "@components/container";
+import Foreground from "@components/foreground";
+import TodoFilters from "@components/todo-filters";
+import Tip from "@components/tip";
 
 function Page() {
-  const [isDarkMode, setIsDarkMode] = useState(false)
+  const [isDarkMode, setIsDarkMode] = useState(false);
 
   useEffect(() => {
-    const html = document.documentElement
+    const html = document.documentElement;
     if (isDarkMode) {
-      html?.classList.add('dark')
+      html?.classList.add('dark');
     } else {
-      if (html?.classList.contains('dark')) html?.classList.remove('dark')
+      if (html?.classList.contains('dark')) html?.classList.remove('dark');
     }
-  }, [isDarkMode])
+  }, [isDarkMode]);
 
   return (
-    <div className="relative w-full min-h-screen pt-24 pb-20 transition-colors bg-light-background dark:bg-dark-background lg:pt-48">
+    <div className={classes.page}>
       <TopAppBar isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode}/>
-      <div className="absolute z-40 top-0 left-0 w-full h-52 bg-mobile-light-bg dark:bg-mobile-dark-bg bg-no-repeat bg-cover lg:h-96 lg:bg-desktop-light-bg lg:dark:bg-desktop-dark-bg"></div>
-      <main className="relative z-50 w-full h-auto px-5 md:w-[45rem] md:mx-auto md:px-0">
-        <div className="w-full h-auto rounded-md overflow-hidden transition-colors shadow-xl mb-6 bg-light-foreground dark:bg-dark-foreground">
+      <Background isDarkMode={isDarkMode} />
+      <Container>
+        <Foreground margin>
           <TodoInput />
-        </div>
-        <div className="w-full h-auto rounded-md overflow-hidden transition-colors shadow-xl mb-6 bg-light-todoList dark:bg-dark-todoList">
+        </Foreground>
+        <Foreground margin>
           <TodoList/>
-        </div>
-        <div className="flex items-center w-full h-16 rounded-md overflow-hidden transition-colors shadow-xl mb-6 bg-light-foreground dark:bg-dark-foreground lg:hidden">
-          <div className="flex flex-row justify-center items-center w-full h-auto">
-            {Object.keys(FILTER_TITLES).map(filter =>
-              <TodoFilter key={filter} filter={filter}>
-                {FILTER_TITLES[filter]}
-              </TodoFilter>
-            )}
-          </div>
-        </div>
-        <p className="w-full h-auto mt-10 text-center text-sm font-bold text-light-textSecondary dark:text-dark-textSecondary">Drag and drop to reorder list</p>
-      </main>
+        </Foreground>
+        <Foreground>
+          <TodoFilters />
+        </Foreground>
+        <Tip />
+      </Container>
     </div>
   )
 }
