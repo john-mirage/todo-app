@@ -1,14 +1,14 @@
 import CheckInput from "@components/check-input"
 import {useState} from "react";
 
-function TodoInput({addTodo, todosCount, completedCount, onSave}) {
+function TodoInput({actions, todosCount, completedCount, onSave}) {
   const [text, setText] = useState("");
 
   function handleSubmit(event) {
     const userInput = event.target.value.trim()
     if (event.key === "Enter") {
       if (userInput.length > 0) {
-        addTodo(userInput)
+        actions.addTodo(userInput)
       }
       setText("")
     }
@@ -20,7 +20,12 @@ function TodoInput({addTodo, todosCount, completedCount, onSave}) {
 
   return (
     <div className="flex flex-row items-center w-full h-16 px-5">
-      <CheckInput className="-ml-2" id="check-all-input"/>
+      <CheckInput
+        className="-ml-2" id="check-all-input"
+        checked={completedCount === todosCount}
+        onClick={actions.completeAllTodos}
+        readOnly
+      />
       <input
         onChange={handleChange}
         onKeyDown={handleSubmit}

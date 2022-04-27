@@ -1,8 +1,15 @@
 import TopAppBar from "@components/top-app-bar"
 import TodoInput from "@containers/todo-input"
 import TodoList from "@containers/todo-list"
-import TodoFilter from "@components/todo-filter"
+import TodoFilter from "@containers/todo-filter"
 import {useEffect, useState} from "react"
+import {SHOW_ACTIVE, SHOW_ALL, SHOW_COMPLETED} from "@constants/todo-filters";
+
+const FILTER_TITLES = {
+  [SHOW_ALL]: 'All',
+  [SHOW_ACTIVE]: 'Active',
+  [SHOW_COMPLETED]: 'Completed'
+}
 
 function Page() {
   const [isDarkMode, setIsDarkMode] = useState(false)
@@ -28,7 +35,13 @@ function Page() {
           <TodoList/>
         </div>
         <div className="flex items-center w-full h-16 rounded-md overflow-hidden transition-colors shadow-xl mb-6 bg-light-foreground dark:bg-dark-foreground lg:hidden">
-          <TodoFilter/>
+          <div className="flex flex-row justify-center items-center w-full h-auto">
+            {Object.keys(FILTER_TITLES).map(filter =>
+              <TodoFilter key={filter} filter={filter}>
+                {FILTER_TITLES[filter]}
+              </TodoFilter>
+            )}
+          </div>
         </div>
         <p className="w-full h-auto mt-10 text-center text-sm font-bold text-light-textSecondary dark:text-dark-textSecondary">Drag and drop to reorder list</p>
       </main>

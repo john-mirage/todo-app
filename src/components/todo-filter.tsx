@@ -1,11 +1,12 @@
-function TodoFilter() {
-    return (
-        <div className="flex flex-row justify-center items-center w-full h-auto">
-            <button className="text-base font-bold text-blue mr-5 transition-colors">All</button>
-            <button className="text-base font-bold text-light-textSecondary dark:text-dark-textSecondary mr-5 transition-colors hover:text-light-textPrimary last:mr-0 dark:hover:text-dark-textPrimary">Active</button>
-            <button className="text-base font-bold text-light-textSecondary dark:text-dark-textSecondary mr-5 transition-colors hover:text-light-textPrimary last:mr-0 dark:hover:text-dark-textPrimary">Completed</button>
-        </div>
-    )
+function TodoFilter({active, children, setFilter}) {
+  return (
+    <button
+      className={`text-base font-bold mr-5 last:mr-0 ${active ? "text-blue" : "text-light-textSecondary dark:text-dark-textSecondary transition-colors hover:text-light-textPrimary dark:hover:text-dark-textPrimary"}`}
+      onClick={setFilter}
+    >
+      {children}
+    </button>
+  )
 }
 
 export default TodoFilter
