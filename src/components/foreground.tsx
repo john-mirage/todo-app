@@ -5,7 +5,7 @@ function Foreground({ children, margin }) {
   const activeClasses = classNames([
     classes.foreground,
     {
-      [classes.foregroundMb]: margin,
+      [classes.margin]: margin,
     }
   ]);
 

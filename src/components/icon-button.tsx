@@ -1,14 +1,22 @@
-function IconButton({ className, children, onClick }) {
-    return (
-        <button
-            className={`relative flex w-12 h-12 rounded-full cursor-pointer ${className}`}
-            onClick={onClick}
-        >
-            <div className="m-auto">
-                {children}
-            </div>
-        </button>
-    );
+import classNames from "classnames";
+import classes from "@assets/styles/components/icon-button.module.css";
+
+function IconButton({children, onClick, margin}) {
+  const activeClassNames = classNames([
+    classes.button,
+    {
+      [classes.margin]: margin,
+    }
+  ]);
+
+  return (
+    <button
+      className={activeClassNames}
+      onClick={onClick}
+    >
+      {children}
+    </button>
+  );
 }
 
 export default IconButton;

@@ -21,24 +21,28 @@ function Page() {
     }
   }, [isDarkMode]);
 
+  function toggleDarkMode() {
+    setIsDarkMode(!isDarkMode);
+  }
+
   return (
     <div className={classes.page}>
-      <TopAppBar isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode}/>
-      <Background isDarkMode={isDarkMode} />
+      <TopAppBar isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode}/>
+      <Background isDarkMode={isDarkMode}/>
       <Container>
         <Foreground margin>
-          <TodoInput />
+          <TodoInput/>
         </Foreground>
         <Foreground margin>
           <TodoList/>
         </Foreground>
         <Foreground>
-          <TodoFilters />
+          <TodoFilters/>
         </Foreground>
-        <Tip />
+        <Tip/>
       </Container>
     </div>
-  )
+  );
 }
 
-export default Page
+export default Page;
