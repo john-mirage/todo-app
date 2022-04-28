@@ -1,4 +1,4 @@
-.TodoMenu {
+.todoMenu {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -9,22 +9,22 @@
     background-color: var(--color-foreground);
 }
 
-.TodoMenu__section {
+.todoMenu__section {
     flex: 1 1 0;
 }
 
-.TodoMenu__section_middle {
+.todoMenu__section_middle {
     display: none;
 }
 
-.TodoMenu__remaining {
+.todoMenu__remaining {
     font-size: 1.2rem;
     font-weight: 400;
     letter-spacing: -0.02rem;
     color: var(--color-text-alt);
 }
 
-.TodoMenu__clear {
+.todoMenu__clear {
     display: block;
     margin-left: auto;
     font-size: 1.2rem;
@@ -34,12 +34,20 @@
     color: var(--color-text-alt);
 }
 
-.TodoMenu__clear:hover {
+.todoMenu__clear:hover {
     color: var(--color-text);
 }
 
-@media screen and (min-width: 992px) {
-    .TodoMenu__section_middle {
+@media screen and (min-width: 588px) {
+    .todoMenu__section_middle {
         display: block;
+    }
+
+    .todoMenu__remaining {
+        font-size: 1.4rem;
+    }
+
+    .todoMenu__clear {
+        font-size: 1.4rem;
     }
 }
