@@ -1,7 +1,14 @@
-import CheckInput from "@components/check-input";
+import Switch from "@components/switch";
 import classes from "@assets/styles/components/todo.module.css";
+import classNames from "classnames";
 
 function Todo({id, todo, completeTodo, deleteTodo}) {
+  const todoContentClasses = classNames([
+    classes.content,
+    {
+      [classes.completed]: todo.completed,
+    }
+  ]);
 
   function handleTodoCompletion() {
     completeTodo(todo.id);
@@ -14,14 +21,14 @@ function Todo({id, todo, completeTodo, deleteTodo}) {
   return (
     <li className={classes.container}>
       <div className={classes.fixedSection}>
-        <CheckInput
+        <Switch
           id={id}
           checked={todo.completed}
           onChange={handleTodoCompletion}
         />
       </div>
       <div className={classes.fluidSection}>
-        <p className={classes.content}>{todo.text}</p>
+        <p className={todoContentClasses}>{todo.text}</p>
       </div>
       <div className={classes.fixedSection}>
         <button className={classes.button} onClick={handleTodoDeletion}>

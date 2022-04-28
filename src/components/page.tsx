@@ -37,7 +37,7 @@ function Page() {
         <Foreground margin>
           <TodoList/>
         </Foreground>
-        <Foreground>
+        <Foreground mobile>
           <TodoFilters/>
         </Foreground>
         <Tip/>

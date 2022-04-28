@@ -27,3 +27,22 @@
     color: var(--color-white);
     margin: auto;
 }
+
+@media screen and (min-width: 588px) {
+    .bar {
+        margin-bottom: 4rem;
+    }
+
+    .title {
+        font-size: 4rem;
+        letter-spacing: 1.5rem;
+    }
+
+    .button {
+        margin-right: -1rem;
+    }
+
+    .icon {
+        width: 2.8rem;
+    }
+}
