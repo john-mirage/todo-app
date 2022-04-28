@@ -22,9 +22,8 @@ function TodoInput({actions, todosCount, completedCount}) {
   return (
     <div className={classes.container}>
       <CheckInput
-        className="-ml-2"
         id="check-all-input"
-        checked={completedCount === todosCount}
+        checked={completedCount === todosCount && todosCount > 0}
         onClick={actions.completeAllTodos}
         readOnly
       />
