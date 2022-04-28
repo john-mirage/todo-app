@@ -1,4 +1,4 @@
-import classes from "@assets/styles/components/icon.module.css";
+import classes from "@assets/styles/components/theme-icon.module.css";
 
 const icon = {
   "moon": (
@@ -13,8 +13,8 @@ const icon = {
   ),
 }
 
-function Icon({ name }) {
+function ThemeIcon({ name }) {
   return icon[name];
 }
 
-export default Icon;
+export default ThemeIcon;

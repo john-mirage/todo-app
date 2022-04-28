@@ -1,37 +1,30 @@
-import CheckInput from "@components/check-input"
-import IconButton from "@components/icon-button"
-import CrossIcon from "@components/cross-icon"
+import CheckInput from "@components/check-input";
+import classes from "@assets/styles/components/todo.module.css";
 
-interface Props {
-  id: string;
-  todo: {
-    text: string;
-    completed: boolean;
-    id: number;
-  }
-}
-
-function Todo({id, todo, completeTodo, deleteTodo}: Props) {
+function Todo({id, todo, completeTodo, deleteTodo}) {
 
   function handleTodoCompletion() {
-    completeTodo(todo.id)
+    completeTodo(todo.id);
   }
 
   function handleTodoDeletion() {
-    deleteTodo(todo.id)
+    deleteTodo(todo.id);
   }
 
   return (
-    <div
-      className="cd-todo cursor-grab flex flex-row items-center w-full h-16 bg-light-foreground dark:bg-dark-foreground px-5 mb-px last:mb-0">
-      <CheckInput id={id} className="-ml-2" checked={todo.completed} onChange={handleTodoCompletion}/>
-      <p
-        className="cd-todo-content text-sm font-normal text-light-textPrimary dark:text-dark-textPrimary ml-5">{todo.text}</p>
-      <IconButton className="cd-cross-button ml-auto -mr-4" onClick={handleTodoDeletion}>
-        <CrossIcon
-          className="cd-cross-icon w-4 h-4 stroke-light-textSecondary dark:stroke-dark-textSecondary hover:stroke-light-textPrimary hover:dark:stroke-dark-textPrimary lg:opacity-0 lg:transition-opacity"/>
-      </IconButton>
-    </div>
+    <li className={classes.container}>
+      <CheckInput
+        id={id}
+        checked={todo.completed}
+        onChange={handleTodoCompletion}
+      />
+      <p className={classes.content}>{todo.text}</p>
+      <button className={classes.button} onClick={handleTodoDeletion}>
+        <svg className={classes.icon} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18">
+          <path fill="#494C6B" fillRule="evenodd" d="M16.97 0l.708.707L9.546 8.84l8.132 8.132-.707.707-8.132-8.132-8.132 8.132L0 16.97l8.132-8.132L0 .707.707 0 8.84 8.132 16.971 0z"/>
+        </svg>
+      </button>
+    </li>
   )
 }
 

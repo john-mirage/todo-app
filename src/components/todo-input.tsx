@@ -1,27 +1,29 @@
 import CheckInput from "@components/check-input"
 import {useState} from "react";
+import classes from "@assets/styles/components/todo-input.module.css";
 
-function TodoInput({actions, todosCount, completedCount, onSave}) {
+function TodoInput({actions, todosCount, completedCount}) {
   const [text, setText] = useState("");
 
   function handleSubmit(event) {
-    const userInput = event.target.value.trim()
+    const userInput = event.target.value.trim();
     if (event.key === "Enter") {
       if (userInput.length > 0) {
-        actions.addTodo(userInput)
+        actions.addTodo(userInput);
       }
-      setText("")
+      setText("");
     }
   }
 
   function handleChange(event) {
-    setText(event.target.value)
+    setText(event.target.value);
   }
 
   return (
-    <div className="flex flex-row items-center w-full h-16 px-5">
+    <div className={classes.container}>
       <CheckInput
-        className="-ml-2" id="check-all-input"
+        className="-ml-2"
+        id="check-all-input"
         checked={completedCount === todosCount}
         onClick={actions.completeAllTodos}
         readOnly
@@ -30,7 +32,7 @@ function TodoInput({actions, todosCount, completedCount, onSave}) {
         onChange={handleChange}
         onKeyDown={handleSubmit}
         value={text}
-        className="flex-1 py-2 px-5 outline-none transition-colors text-light-textPrimary dark:text-dark-textPrimary bg-light-foreground dark:bg-dark-foreground placeholder:text-light-textSecondary dark:placeholder:text-dark-textSecondary"
+        className={classes.input}
         type="text"
         placeholder="Create a new todo..."
       />

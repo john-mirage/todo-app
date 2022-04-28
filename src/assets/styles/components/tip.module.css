@@ -5,9 +5,5 @@
     text-align: center;
     font-size: 1.4rem;
     font-weight: 700;
-    color: var(--color-light-text-alt);
-}
-
-.dark .tip {
-    color: var(--color-dark-text-alt);
+    color: var(--color-text-alt);
 }

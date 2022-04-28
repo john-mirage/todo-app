@@ -1,7 +1,7 @@
-import TopAppBar from "@components/top-app-bar"
-import TodoInput from "@containers/todo-input"
-import TodoList from "@containers/todo-list"
-import {useEffect, useState} from "react"
+import TopAppBar from "@components/top-app-bar";
+import TodoInput from "@containers/todo-input";
+import TodoList from "@containers/todo-list";
+import {useEffect, useState} from "react";
 import Background from "@components/background";
 import classes from "@assets/styles/components/page.module.css";
 import Container from "@components/container";
@@ -13,11 +13,12 @@ function Page() {
   const [isDarkMode, setIsDarkMode] = useState(false);
 
   useEffect(() => {
-    const html = document.documentElement;
     if (isDarkMode) {
-      html?.classList.add('dark');
+      document.documentElement.classList.add('dark');
     } else {
-      if (html?.classList.contains('dark')) html?.classList.remove('dark');
+      if (document.documentElement.classList.contains('dark')) {
+        document.documentElement.classList.remove('dark');
+      }
     }
   }, [isDarkMode]);
 
