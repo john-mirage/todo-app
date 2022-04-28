@@ -1,10 +1,7 @@
 .bar {
-    position: absolute;
-    z-index: 50;
-    top: 0;
-    left: 0;
     width: 100%;
     height: auto;
+    margin-bottom: 1.6rem;
 }
 
 .title {
@@ -13,4 +10,20 @@
     letter-spacing: 0.9rem;
     text-transform: uppercase;
     color: var(--color-white);
+    margin: 0.8rem 0 0 0;
+}
+
+.button {
+    display: flex;
+    width: 4.8rem;
+    height: 4.8rem;
+    border-radius: 2.4rem;
+    margin-right: -1.4rem;
+}
+
+.icon {
+    width: 2rem;
+    height: auto;
+    color: var(--color-white);
+    margin: auto;
 }
