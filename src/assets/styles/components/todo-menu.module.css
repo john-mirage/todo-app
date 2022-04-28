@@ -22,6 +22,7 @@
     font-weight: 400;
     letter-spacing: -0.02rem;
     color: var(--color-text-alt);
+    margin: 0;
 }
 
 .todoMenu__clear {
