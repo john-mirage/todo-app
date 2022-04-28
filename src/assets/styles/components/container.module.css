@@ -7,7 +7,7 @@
     padding-right: 2.4rem;
 }
 
-.flex {
+.container_flex {
     display: flex;
     flex-direction: row;
     justify-content: space-between;

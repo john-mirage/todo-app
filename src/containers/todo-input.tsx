@@ -1,5 +1,5 @@
 import { connect } from "react-redux";
-import TodoInput from "@components/todo-input";
+import TodoAdd from "@components/todo-add";
 import { getCompletedTodoCount } from "@selectors/selectors";
 import {ActionCreator, bindActionCreators} from "redux";
 import * as TodoActions from "@actions/index";
@@ -16,4 +16,4 @@ const mapDispatchToProps = dispatch => ({
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(TodoInput)
+)(TodoAdd)

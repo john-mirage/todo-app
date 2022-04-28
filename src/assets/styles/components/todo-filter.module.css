@@ -1,22 +1,22 @@
-.filter {
+.todoFilter {
     font-size: 1.4rem;
     font-weight: 700;
     margin-right: 1.6rem;
 }
 
-.filter:last-child {
+.todoFilter:last-child {
     margin-right: 0;
 }
 
-.active {
+.todoFilter_active {
     color: var(--color-blue);
 }
 
-.inactive {
+.todoFilter_inactive {
     color: var(--color-text-alt);
     transition: color;
 }
 
-.inactive:hover {
+.todoFilter_inactive:hover {
     color: var(--color-text);
 }
