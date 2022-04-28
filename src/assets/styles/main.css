@@ -49,6 +49,12 @@ button {
     background-color: transparent;
     font-family: inherit;
     cursor: pointer;
+    padding: 0;
+}
+
+input {
+    border: none;
+    background-color: transparent;
 }
 
 ul,
