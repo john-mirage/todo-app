@@ -6,13 +6,13 @@ import classes from "@assets/styles/components/background.module.css";
 
 function Background({ isDarkMode }) {
   return (
-    <picture className={classes.container}>
+    <picture className={classes.background}>
       <source
         srcSet={isDarkMode ? desktopDarkBackground : desktopLightBackground}
         media="(min-width: 992px)"
       />
       <img
-        className={classes.image}
+        className={classes.background__image}
         src={isDarkMode ? mobileDarkBackground : mobileLightBackground}
         alt="Background image"
       />

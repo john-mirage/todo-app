@@ -25,3 +25,11 @@
 .input::placeholder {
     color: var(--color-text-alt);
 }
+
+@media screen and (min-width: 588px) {
+    .container {
+        height: 6.4rem;
+        padding-left: 2.4rem;
+        padding-right: 2.4rem;
+    }
+}

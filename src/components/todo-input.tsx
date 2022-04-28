@@ -1,4 +1,4 @@
-import CheckInput from "@components/check-input"
+import Switch from "@components/switch"
 import {useState} from "react";
 import classes from "@assets/styles/components/todo-input.module.css";
 
@@ -21,7 +21,7 @@ function TodoInput({actions, todosCount, completedCount}) {
 
   return (
     <div className={classes.container}>
-      <CheckInput
+      <Switch
         id="check-all-input"
         checked={completedCount === todosCount && todosCount > 0}
         onClick={actions.completeAllTodos}

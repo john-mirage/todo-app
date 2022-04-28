@@ -27,7 +27,13 @@
     font-size: 1.2rem;
     font-weight: 400;
     letter-spacing: -0.02rem;
+    line-height: 1.6rem;
     color: var(--color-text);
+}
+
+.content.completed {
+    color: var(--color-text-alt);
+    text-decoration: line-through;
 }
 
 .button {
@@ -47,13 +53,18 @@
     margin: auto;
 }
 
-.icon:hover {
-    color: var(--color-text);
-}
-
 @media screen and (min-width: 992px) {
+    .container {
+        padding-left: 2.4rem;
+        padding-right: 2.4rem;
+    }
+
     .icon {
         opacity: 0;
         transition: opacity 150ms;
     }
+}
+
+.container:hover .icon {
+    opacity: 1;
 }
