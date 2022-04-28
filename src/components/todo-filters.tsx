@@ -1,5 +1,6 @@
 import TodoFilter from "@containers/todo-filter";
 import {SHOW_ACTIVE, SHOW_ALL, SHOW_COMPLETED} from "@constants/todo-filters";
+import classes from "@assets/styles/components/todo-filters.module.css";
 
 const FILTER_TITLES = {
   [SHOW_ALL]: 'All',
@@ -9,7 +10,7 @@ const FILTER_TITLES = {
 
 function TodoFilters() {
   return (
-    <div className="flex flex-row justify-center items-center w-full h-auto">
+    <div className={classes.container}>
       {Object.keys(FILTER_TITLES).map(filter =>
         <TodoFilter key={filter} filter={filter}>
           {FILTER_TITLES[filter]}

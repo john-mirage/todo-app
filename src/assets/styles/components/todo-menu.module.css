@@ -1,0 +1,44 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: 5rem;
+    padding-left: 2.4rem;
+    padding-right: 2.4rem;
+    border-top: 0.1rem solid var(--color-list);
+    background-color: var(--color-foreground);
+}
+
+.section {
+    flex: 1 1 0;
+}
+
+.middle {
+    display: none;
+}
+
+.todoLeft {
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: var(--color-text-alt);
+}
+
+.clearTodos {
+    display: block;
+    margin-left: auto;
+    font-size: 1.4rem;
+    font-weight: 400;
+    transition: colors 150ms;
+    color: var(--color-text-alt);
+}
+
+.clearTodos:hover {
+    color: var(--color-text);
+}
+
+@media screen and (min-width: 992px) {
+    .middle {
+        display: block;
+    }
+}

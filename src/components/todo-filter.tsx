@@ -1,11 +1,17 @@
-
+import classNames from "classnames";
+import classes from "@assets/styles/components/todo-filter.module.css";
 
 function TodoFilter({active, children, setFilter}) {
+  const activeClassNames = classNames([
+    classes.filter,
+    {
+      [classes.active]: active,
+      [classes.inactive]: !active,
+    }
+  ]);
+
   return (
-    <button
-      className={`text-base font-bold mr-5 last:mr-0 ${active ? "text-blue" : "text-light-textSecondary dark:text-dark-textSecondary transition-colors hover:text-light-textPrimary dark:hover:text-dark-textPrimary"}`}
-      onClick={setFilter}
-    >
+    <button className={activeClassNames} onClick={setFilter}>
       {children}
     </button>
   )

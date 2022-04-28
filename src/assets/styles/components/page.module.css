@@ -5,15 +5,11 @@
     padding-top: 4rem;
     padding-bottom: 6.4rem;
     transition: background-color;
-    background-color: var(--color-light-background);
+    background-color: var(--color-background);
 }
 
 @media screen and (min-width: 992px) {
     .page {
         padding-top: 7.2rem;
     }
-}
-
-.dark .page {
-    background-color: var(--color-dark-background);
 }

@@ -1,19 +1,33 @@
-import CheckIcon from "@components/check-icon"
+import classes from "@assets/styles/components/check-input.module.css";
 
-function CheckInput({ className, id, checked, onChange, onClick, readOnly }) {
+function CheckInput({ id, checked, onChange, onClick, readOnly }) {
     return (
         <>
-            <input className="cd-check-input hidden" type="checkbox" id={id} name={id} checked={checked} onChange={onChange} readOnly={readOnly} />
-            <label className={`cd-check-label block w-auto h-auto ${className}`} htmlFor={id} onClick={onClick}>
-                <div className="cd-check-button flex w-12 h-12 rounded-full cursor-pointer">
-                    <div className="cd-check-circle flex w-7 h-7 m-auto rounded-full transition-colors bg-light-todoList dark:bg-dark-todoList">
-                        <CheckIcon className="cd-check-icon hidden w-3 h-3 m-auto stroke-white" />
-                        <div className="cd-check-overlay w-6 h-6 m-auto rounded-full bg-light-foreground dark:bg-dark-foreground"></div>
-                    </div>
-                </div>
+            <input
+              className={classes.input}
+              type="checkbox"
+              id={id}
+              name={id}
+              checked={checked}
+              onChange={onChange}
+              readOnly={readOnly}
+            />
+            <label
+              className={classes.label}
+              htmlFor={id}
+              onClick={onClick}
+            >
+                <span className={classes.button}>
+                    <span className={classes.circle}>
+                        <svg className={classes.icon} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11 9">
+                          <path fill="none" stroke="currentColor" strokeWidth="2" d="M1 4.304L3.696 7l6-6"/>
+                        </svg>
+                        <span className={classes.overlay}></span>
+                    </span>
+                </span>
             </label>
         </>
     )
 }
 
-export default CheckInput
+export default CheckInput;

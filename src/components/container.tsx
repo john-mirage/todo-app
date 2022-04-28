@@ -1,10 +1,18 @@
 import classes from "@assets/styles/components/container.module.css";
+import classNames from "classnames";
 
-function Container({ children }) {
+function Container({ children, flex }) {
+  const activeClassNames = classNames([
+    classes.container,
+    {
+      [classes.flex]: flex,
+    }
+  ]);
+
   return (
-    <main className={classes.container}>
+    <div className={activeClassNames}>
       { children }
-    </main>
+    </div>
   );
 }
 
