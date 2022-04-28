@@ -1,4 +1,4 @@
-.container {
+.todoAdd {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -8,7 +8,7 @@
     padding-right: 2rem;
 }
 
-.input {
+.todoAdd__input {
     flex: 1 1 0;
     display: block;
     width: 100%;
@@ -22,12 +22,12 @@
     letter-spacing: -0.02rem;
 }
 
-.input::placeholder {
+.todoAdd__input::placeholder {
     color: var(--color-text-alt);
 }
 
 @media screen and (min-width: 588px) {
-    .container {
+    .todoAdd {
         height: 6.4rem;
         padding-left: 2.4rem;
         padding-right: 2.4rem;

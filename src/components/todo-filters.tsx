@@ -10,7 +10,7 @@ const FILTER_TITLES = {
 
 function TodoFilters() {
   return (
-    <div className={classes.container}>
+    <div className={classes.todoFilters}>
       {Object.keys(FILTER_TITLES).map(filter =>
         <TodoFilter key={filter} filter={filter}>
           {FILTER_TITLES[filter]}

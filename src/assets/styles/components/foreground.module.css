@@ -8,12 +8,12 @@
     background-color: var(--color-foreground);
 }
 
-.foreground.margin {
+.foreground_margin {
     margin-bottom: 2.4rem;
 }
 
-@media screen and (min-width: 992px) {
-    .foreground.mobile {
+@media screen and (min-width: 588px) {
+    .foreground_mobile {
         display: none;
     }
 }

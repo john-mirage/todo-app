@@ -7,7 +7,7 @@ function TodoList({filteredTodos, todosCount, completedCount, actions}) {
     <>
       {
         filteredTodos.length > 0 &&
-        <ul className={classes.list}>
+        <ul className={classes.todoList}>
           {filteredTodos.map((todo, index) => (
             <Todo
               key={index}

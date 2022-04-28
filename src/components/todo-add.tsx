@@ -1,8 +1,8 @@
 import Switch from "@components/switch"
 import {useState} from "react";
-import classes from "@assets/styles/components/todo-input.module.css";
+import classes from "@assets/styles/components/todo-add.module.css";
 
-function TodoInput({actions, todosCount, completedCount}) {
+function TodoAdd({actions, todosCount, completedCount}) {
   const [text, setText] = useState("");
 
   function handleSubmit(event) {
@@ -20,7 +20,7 @@ function TodoInput({actions, todosCount, completedCount}) {
   }
 
   return (
-    <div className={classes.container}>
+    <div className={classes.todoAdd}>
       <Switch
         id="check-all-input"
         checked={completedCount === todosCount && todosCount > 0}
@@ -31,7 +31,7 @@ function TodoInput({actions, todosCount, completedCount}) {
         onChange={handleChange}
         onKeyDown={handleSubmit}
         value={text}
-        className={classes.input}
+        className={classes.todoAdd__input}
         type="text"
         placeholder="Create a new todo..."
       />
@@ -39,4 +39,4 @@ function TodoInput({actions, todosCount, completedCount}) {
   )
 }
 
-export default TodoInput
+export default TodoAdd

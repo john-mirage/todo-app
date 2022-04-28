@@ -1,4 +1,4 @@
-.container {
+.todo {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -11,19 +11,19 @@
     cursor: grab;
 }
 
-.container:last-child {
+.todo:last-child {
     margin-bottom: 0;
 }
 
-.fixedSection {
+.todo__fixedSection {
     flex: 0 0 auto;
 }
 
-.fluidSection {
+.todo__fluidSection {
     flex: 1 1 0;
 }
 
-.content {
+.todo__content {
     font-size: 1.2rem;
     font-weight: 400;
     letter-spacing: -0.02rem;
@@ -31,12 +31,12 @@
     color: var(--color-text);
 }
 
-.content.completed {
+.todo__content_completed {
     color: var(--color-text-alt);
     text-decoration: line-through;
 }
 
-.button {
+.todo__button {
     display: flex;
     width: 4.8rem;
     height: 4.8rem;
@@ -46,7 +46,7 @@
     margin-left: auto;
 }
 
-.icon {
+.todo__icon {
     width: 1.2rem;
     height: auto;
     color: var(--color-text-alt);
@@ -54,17 +54,17 @@
 }
 
 @media screen and (min-width: 992px) {
-    .container {
+    .todo {
         padding-left: 2.4rem;
         padding-right: 2.4rem;
     }
 
-    .icon {
+    .todo__icon {
         opacity: 0;
         transition: opacity 150ms;
     }
 }
 
-.container:hover .icon {
+.todo:hover .todo__icon {
     opacity: 1;
 }

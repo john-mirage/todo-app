@@ -3,10 +3,10 @@ import classes from "@assets/styles/components/todo-filter.module.css";
 
 function TodoFilter({active, children, setFilter}) {
   const activeClassNames = classNames([
-    classes.filter,
+    classes.todoFilter,
     {
-      [classes.active]: active,
-      [classes.inactive]: !active,
+      [classes.todoFilter_active]: active,
+      [classes.todoFilter_inactive]: !active,
     }
   ]);
 

@@ -5,7 +5,7 @@ function Container({ children, flex }) {
   const activeClassNames = classNames([
     classes.container,
     {
-      [classes.flex]: flex,
+      [classes.container_flex]: flex,
     }
   ]);
 

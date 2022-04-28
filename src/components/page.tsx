@@ -1,4 +1,4 @@
-import TopAppBar from "@components/top-app-bar";
+import Header from "@components/header";
 import TodoInput from "@containers/todo-input";
 import TodoList from "@containers/todo-list";
 import {useEffect, useState} from "react";
@@ -28,7 +28,7 @@ function Page() {
 
   return (
     <div className={classes.page}>
-      <TopAppBar isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode}/>
+      <Header isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode}/>
       <Background isDarkMode={isDarkMode}/>
       <Container>
         <Foreground margin>
