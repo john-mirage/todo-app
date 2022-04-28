@@ -53,18 +53,26 @@
     margin: auto;
 }
 
-@media screen and (min-width: 992px) {
+.todo:hover .todo__icon {
+    opacity: 1;
+}
+
+@media screen and (min-width: 588px) {
     .todo {
+        height: 6.4rem;
         padding-left: 2.4rem;
         padding-right: 2.4rem;
     }
 
+    .todo__content {
+        font-size: 1.8rem;
+        letter-spacing: -0.03rem;
+        padding-left: 1.2rem;
+    }
+
     .todo__icon {
+        width: 2rem;
         opacity: 0;
         transition: opacity 150ms;
     }
-}
-
-.todo:hover .todo__icon {
-    opacity: 1;
 }

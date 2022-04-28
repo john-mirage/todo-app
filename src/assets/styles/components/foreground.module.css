@@ -9,10 +9,14 @@
 }
 
 .foreground_margin {
-    margin-bottom: 2.4rem;
+    margin-bottom: 1.6rem;
 }
 
 @media screen and (min-width: 588px) {
+    .foreground_margin {
+        margin-bottom: 2.4rem;
+    }
+
     .foreground_mobile {
         display: none;
     }
